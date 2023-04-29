@@ -5,6 +5,8 @@ description: config file for i3 config
 # config
 
 ```
+#set theme: catppuccin latte
+
 nbfset $rosewater #dc8a78
 set $flamingo  #dd7878
 set $pink      #ea76cb
@@ -131,13 +133,13 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
-#load nitrogen on start 
+#load nitrogen on start (wallpaper)
 exec --no-startup-id nitrogen --restore
 
-#load picom on start
+#load picom on start (compositor)
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
-#load dunst
+#load dunst on start (notifications)
 exec --no-startup-id dunst --config ~/.config/dunst/dunstrc
 
 
@@ -199,32 +201,33 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-
-#gaps
-gaps inner 27
-gaps outer 5
+# Set gaps between windows
+gaps inner 60
+gaps outer 2
 smart_gaps on
 
-# Start lemonbar to display a workspace bar 
+# use i3blocks to configure status bar
 
-bar {
+bar { 
+
     status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
-    position bottom
-    colors {
-        background #1E1E1E
-        separator  #E5B4FF
+    position top
+    tray_output primary
+      workspace_buttons no
+      separator_symbol "|"
+      separator_block_width 10
+      font pango:monospace 10
+      border_width 6
 
-        # focused workspace
-        focused_workspace  #E5B4FF #1E1E1E #E5B4FF
-
-        # inactive workspace
-        inactive_workspace #555555 #1E1E1E #E5B4FF
-
-        # urgent workspace
-        urgent_workspace   #F50808 #1E1E1E #F50808
-
-        # binding mode
-        binding_mode       #F50808 #1E1E1E #F50808
-    }
 }
+
+
+
+# Start kitty terminal on startup
+exec --no-startup-id kitty
+
+# Set initial window position and size
+for_window [class="kitty"] move position 50 50
+for_window [class="kitty"] resize set 800 600
+
 ```
