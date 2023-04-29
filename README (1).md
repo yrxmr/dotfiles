@@ -5,31 +5,31 @@ description: config file for i3 config
 # config
 
 ```
-set $rosewater #f5e0dc
-set $flamingo  #f2cdcd
-set $pink      #f5c2e7
-set $mauve     #cba6f7
-set $red       #f38ba8
-set $maroon    #eba0ac
-set $peach     #fab387
-set $green     #a6e3a1
-set $teal      #94e2d5
-set $sky       #89dceb
-set $sapphire  #74c7ec
-set $blue      #89b4fa
-set $lavender  #b4befe
-set $text      #cdd6f4
-set $subtext1  #bac2de
-set $subtext0  #a6adc8
-set $overlay2  #9399b2
-set $overlay1  #7f849c
-set $overlay0  #6c7086
-set $surface2  #585b70
-set $surface1  #45475a
-set $surface0  #313244
-set $base      #1e1e2e
-set $mantle    #181825
-set $crust     #11111b
+nbfset $rosewater #dc8a78
+set $flamingo  #dd7878
+set $pink      #ea76cb
+set $mauve     #8839ef
+set $red       #d20f39
+set $maroon    #e64553
+set $peach     #fe640b
+set $green     #40a02b
+set $teal      #179299
+set $sky       #04a5e5
+set $sapphire  #209fb5
+set $blue      #1e66f5
+set $lavender  #7287fd
+set $text      #4c4f69
+set $subtext1  #5c5f77
+set $subtext0  #6c6f85
+set $overlay2  #7c7f93
+set $overlay1  #8c8fa1
+set $overlay0  #9ca0b0
+set $surface2  #acb0be
+set $surface1  #bcc0cc
+set $surface0  #ccd0da
+set $base      #eff1f5
+set $mantle    #e6e9ef
+set $crust     #dce0e8
 
 client.focused           $pink     $base $text  $rosewater $pink
 client.focused_inactive  $mauve    $base $text  $rosewater $mauve
@@ -137,6 +137,10 @@ exec --no-startup-id nitrogen --restore
 #load picom on start
 exec --no-startup-id picom --config ~/.config/picom/picom.conf
 
+#load dunst
+exec --no-startup-id dunst --config ~/.config/dunst/dunstrc
+
+
 
 # switch to workspace
 bindsym $mod+1 workspace 1
@@ -201,12 +205,26 @@ gaps inner 27
 gaps outer 5
 smart_gaps on
 
-# Start i3bar to display a workspace bar 
+# Start lemonbar to display a workspace bar 
 
 bar {
-        status_command py3status
-        
+    status_command i3blocks -c ~/.config/i3blocks/i3blocks.conf
+    position bottom
+    colors {
+        background #1E1E1E
+        separator  #E5B4FF
+
+        # focused workspace
+        focused_workspace  #E5B4FF #1E1E1E #E5B4FF
+
+        # inactive workspace
+        inactive_workspace #555555 #1E1E1E #E5B4FF
+
+        # urgent workspace
+        urgent_workspace   #F50808 #1E1E1E #F50808
+
+        # binding mode
+        binding_mode       #F50808 #1E1E1E #F50808
+    }
 }
-
-
 ```
