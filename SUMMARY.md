@@ -3,7 +3,7 @@
 * [Page 1](README.md)
 * [config](<README (1).md>)
 * [kitty.conf](kitty.conf.md)
-* [config](config-1.md)
+* [i3blocks.conf](i3blocks.conf.md)
 * [picom.conf](picom.conf.md)
 * [bookmarks](bookmarks.md)
 * [dunstrc](dunstrc.md)
