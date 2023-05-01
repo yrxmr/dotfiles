@@ -29,9 +29,12 @@
     <td>
       <h3>♥ My PC Build</h3>
       <ul>
-        <li><a href="https://fr.pcpartpicker.com/list/KZgyGL" target="_blank">♥ Components list</a></li>
+        <li><a href="https://fr.pcpartpicker.com/list/KZgyGL" target="_blank">♥ Components</a></li>
         <li><a href="https://www.amazon.fr/dp/B09HRC6GJN?psc=1&ref=ppx_yo2ov_dt_b_product_details" target="_blank">♥ Case</a></li>
-      </ul>
+        <li><a href="https://www.fnac.com/Ecran-PC-MSI-Modern-MD271CPW-27-Ecran-incurve-Full-HD-Blanc/a16823208/w-4#omnsearchpos=25" target="_blank">♥ Monitor</a></li>
+       </ul>
+      
+    
     </td>
     <td>
       <h3>⌨ Programming</h3>
