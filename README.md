@@ -1,4 +1,4 @@
-When I was bored and gave Ubuntu a makeover 
+When I was bored and redid Linux's UI
 
 "config" I3 window manager's config file
 
