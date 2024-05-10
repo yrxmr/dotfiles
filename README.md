@@ -1,10 +1,15 @@
 When I was bored and gave Ubuntu a makeover.
 
 "config" I3 window manager's config file
+
 "dunstrc.md" Dunst's config file (for notifications)
+
 "fetch.sh" Fetch script
+
 "I3blocks.conf.md" I3block's config file (for the task bar)
+
 "Kitty.conf.md" Terminal emulator's config file
+
 "Picom.conf.md" Picom compositor's config file 
 
 
