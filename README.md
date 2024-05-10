@@ -1,4 +1,4 @@
-When I was bored and redid Linux's UI
+When I was bored and redid my Linux OS' UI
 
 "config" I3 window manager's config file
 
